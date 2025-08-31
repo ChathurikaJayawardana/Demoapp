@@ -5,7 +5,7 @@ export function getBorrowerPipeline() {
 }
 
 export function getBorrowerDetail(id) {
-  return Promise.resolve(data.endpoints.find(e => e.name === "Get Borrower Detail").response);
+  return Promise.resolve(data.endpoints.find(e => e.name === "Get Borrower Detail").response[id-1]);
 }
 
 export function getBrokerInfo() {

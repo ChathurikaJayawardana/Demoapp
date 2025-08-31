@@ -11,10 +11,10 @@
             "name": "Sarah Dunn",
             "loan_type": "Home Loan",
             "amount": 300000,
-            "status": "Renew"
+            "status": "New"
           },
           {
-            "id": "3",
+            "id": "2",
             "name": "Lisa Carter",
             "loan_type": "Home Loan",
             "amount": 450000,
@@ -23,39 +23,142 @@
         ],
         "in_review": [
           {
-            "id": "2",
+            "id": "3",
             "name": "Alan Matthews",
             "loan_type": "Personal Loan",
             "amount": 20000,
             "status": "In Review"
           }
         ],
-        "approved": []
+         "approved": [
+            {
+              "id": "4",
+              "name": "Michael Ross",
+              "loan_type": "Car Loan",
+              "amount": 25000,
+              "status": "Approved"
+            },
+            {
+              "id": "5",
+              "name": "Emma Watson",
+              "loan_type": "Business Loan",
+              "amount": 120000,
+              "status": "Approved"
+            },
+            {
+              "id": "6",
+              "name": "Daniel Green",
+              "loan_type": "Home Loan",
+              "amount": 550000,
+              "status": "Approved"
+            }
+          ]         
       }
     },
     {
       "name": "Get Borrower Detail",
       "method": "GET",
       "url": "/api/borrowers/{id}",
-      "response": {
-        "id": "1",
-        "name": "Sarah Dunn",
-        "email": "sarah.dunn@example.com",
-        "phone": "(355)123-4557",
-        "loan_amount": 300000,
-        "status": "In Review",
-        "employment": "At Tech Company",
-        "income": 120000,
-        "existing_loan": 240000,
-        "credit_score": 720,
-        "source_of_funds": "Declared",
-        "risk_signal": "Missing Source of Funds declaration",
-        "ai_flags": [
-          "Income Inconsistent with Bank statements",
-          "High Debt-to-Income Ratio detected"
-        ]
-      }
-    },
+      "response": [
+        {
+          "id": "1",
+          "name": "Sarah Dunn",
+          "email": "sarah.dunn@example.com",
+          "phone": "(355)123-4557",
+          "loan_amount": 300000,
+          "status": "New",
+          "employment": "At Tech Company",
+          "income": 120000,
+          "existing_loan": 240000,
+          "credit_score": 720,
+          "source_of_funds": "Declared",
+          "risk_signal": "Missing Source of Funds declaration",
+          "ai_flags": [
+            "Income inconsistent with Bank statements",
+            "High Debt-to-Income Ratio detected"
+          ]
+        },
+        {
+          "id": "2",
+          "name": "Lisa Carter",
+          "email": "lisa.carter@example.com",
+          "phone": "(415)789-1234",
+          "loan_amount": 450000,
+          "status": "New",
+          "employment": "Healthcare Professional",
+          "income": 180000,
+          "existing_loan": 100000,
+          "credit_score": 740,
+          "source_of_funds": "Declared",
+          "risk_signal": null,
+          "ai_flags": []
+        },
+        {
+          "id": "3",
+          "name": "Alan Matthews",
+          "email": "alan.matthews@example.com",
+          "phone": "(212)555-9876",
+          "loan_amount": 20000,
+          "status": "In Review",
+          "employment": "Freelancer",
+          "income": 40000,
+          "existing_loan": 5000,
+          "credit_score": 650,
+          "source_of_funds": "Declared",
+          "risk_signal": null,
+          "ai_flags": [
+            "Limited income history"
+          ]
+        },
+        {
+          "id": "4",
+          "name": "Michael Ross",
+          "email": "michael.ross@example.com",
+          "phone": "(646)222-3344",
+          "loan_amount": 25000,
+          "status": "Approved",
+          "employment": "Retail Manager",
+          "income": 60000,
+          "existing_loan": 12000,
+          "credit_score": 710,
+          "source_of_funds": "Declared",
+          "risk_signal": null,
+          "ai_flags": []
+        },
+        {
+          "id": "5",
+          "name": "Emma Watson",
+          "email": "emma.watson@example.com",
+          "phone": "(202)555-7788",
+          "loan_amount": 120000,
+          "status": "Approved",
+          "employment": "Small Business Owner",
+          "income": 250000,
+          "existing_loan": 50000,
+          "credit_score": 765,
+          "source_of_funds": "Business Revenue",
+          "risk_signal": null,
+          "ai_flags": []
+        },
+        {
+          "id": "6",
+          "name": "Daniel Green",
+          "email": "daniel.green@example.com",
+          "phone": "(303)555-4411",
+          "loan_amount": 550000,
+          "status": "Approved",
+          "employment": "Engineer",
+          "income": 200000,
+          "existing_loan": 150000,
+          "credit_score": 730,
+          "source_of_funds": "Savings & Salary",
+          "risk_signal": "High loan-to-value ratio",
+          "ai_flags": [
+            "Loan-to-value exceeds recommended threshold"
+          ]
+        }
+      ]
+    },  
     {
       "name": "Request Documents",
       "method": "POST",

@@ -41,7 +41,7 @@ export default function BorrowerDetail() {
 
   {/* Right side: status badge */}
   <div>
-    <span className="px-3 py-1 text-xs font-normal rounded-md bg-gray-100 text-yellow-800">
+    <span className="px-3 py-1 text-xs font-bold rounded-md bg-gray-100">
       {detail.status}
     </span>
   </div>
@@ -109,7 +109,7 @@ export default function BorrowerDetail() {
             <AlertTriangle className="w-4 h-4 mr-2" /> {detail.risk_signal}
           </div>
           <Button
-            className="w-full"
+            className="w-full bg-[#EB5B00]"
             variant={"destructive"} data-testid="btn-escalate"
             onClick={() => console.log("Escalate to Credit Committee")}
           >

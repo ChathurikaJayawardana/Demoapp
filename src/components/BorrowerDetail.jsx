@@ -31,7 +31,7 @@ export default function BorrowerDetail() {
 
   return (
     <div data-testid="borrower-detail" className="bg-white shadow-lg rounded p-3">
-<div className="flex justify-between items-start mb-4">
+<div className="flex justify-self-start items-start mb-4">
   {/* Left side: name, email, phone */}
   <div>
     <h2 className="text-[18px] font-bold">{detail.name}</h2>

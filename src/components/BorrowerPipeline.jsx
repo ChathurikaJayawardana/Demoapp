@@ -13,12 +13,11 @@ export default function BorrowerPipeline({ borrowers }) {
         className="cursor-pointer p-2 border rounded mb-2 hover:bg-gray-100 flex justify-between"
       >
         <div>
-          <p className="text-[14px] font-semibold">{b.name}</p>
+          <p className="text-[14px] font-semibold">{b.name} <span className="px-3 py-1 text-xs font-bold rounded-md bg-gray-100">{b.status}</span></p>
           <p className="text-[12px] text-gray-400">{b.loan_type}</p>
         </div>
         <div className="text-right">
           <p className="text-[14px] font-semibold">${b.amount.toLocaleString()}</p>
-          <span className="px-3 py-1 text-xs font-bold rounded-md bg-gray-100">{b.status}</span>
         </div>
       </div>
     ));

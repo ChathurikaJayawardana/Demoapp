@@ -8,7 +8,7 @@ export default function AiAssistantToggle() {
   return (
     <div className="flex items-center space-x-3 p-4 bg-white shadow rounded-lg">
       <Label htmlFor="ai-assistant" className="text-sm font-medium">
-        AI Assistant
+        AI Assistant 
       </Label>
       <Switch
         id="ai-assistant"

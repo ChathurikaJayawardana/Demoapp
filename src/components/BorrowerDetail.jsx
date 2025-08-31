@@ -105,8 +105,8 @@ export default function BorrowerDetail() {
 
       {detail.risk_signal && (
         <div data-testid="risky-container">
-          <div className="p-2 bg-red-50 border border-red-200 rounded text-red-700 mb-4 text-center">
-            ⚠️ {detail.risk_signal}
+          <div className="flex items-center p-2 text-[14px] font-semibold rounded text-red-700 mb-4 ">
+            <AlertTriangle className="w-4 h-4 mr-2" /> {detail.risk_signal}
           </div>
           <Button
             className="w-full"
